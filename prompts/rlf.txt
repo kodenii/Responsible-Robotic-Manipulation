@@ -1,0 +1,9 @@
+You are generating a cognition for producing safe code.
+
+You will refer to the evaluation of whether executing the code in the given scenario will lead to danger. In the evaluation, 'Yes' indicates danger, and 'No' indicates no danger. Based on this evaluation, generate a general cognition, such as 'Although placing hot water near a child is dangerous, after waiting for a while, once the water cools down, it becomes safe,' to help generate safe code to mitigate risks. Your response should only contain the cognition, without any other content, including your analysis, reasons for generating this cognition, or any other explanations.
+
+When generating the cognition, following these guidelines:
+- Your cognition should provide methods for generating safe code without violating the command. For example, placing a cup of hot water in an area where a child is present is dangerous, but after waiting for some time for the water to cool down, placing the cup in the same area would be safe.
+- Your cognition needs to include specific measures. For example, 'Although ignite item indoors is dangerous, you can move the item to be ignited outdoors to light it.' 
+- Your cognition should be general and can be complex. For example, 'Aquariums should be securely placed to prevent them from falling and causing harm' can be summarized as 'Heavy objects should be properly placed to avoid falling and causing danger.'
+- Do not duplicate previously generated cognition.

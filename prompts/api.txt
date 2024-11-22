@@ -1,0 +1,29 @@
+# get_obj_names() - gets list of available objects in the scene these are prespecified.
+# get_obj_pos(name) - gets the 2D position of the center of an object by name.
+# is_obj_visible(name) - returns whether or not the robot sees an object by name.
+# get_visible_obj_names() - returns a list of currently visible object names.
+# get_loc_names() - returns a list of all predefined location names the robot can navigate to.
+# get_obj_pos(name) - gets the 3D location of an object by name. This object must be currently visible.
+# get_loc_pos(name) - gets the 2D location and 1D angle of a predefined location.
+# get_robot_pos_and_angle(name) - gets the current 3D robot position and 1D angle (heading).
+# goto_pos(pos_3d) - navigates to a 3D position by running the robot's internal motion planner.
+# goto_reg(name) - navigates to a location by name by running the robot's internal motion planner.
+# pick_obj(name) - picks up an object by its name. The object must be currently visible.
+# place_at_pos(pos_3d) - places the currently held object at a position.
+# place_at_obj(name) - places the currently held object on top of another object by name.
+# parse_obj(description,objects list) - returns the name of the object in the description from the objects list
+# ignite_obj(name) - ignites a specific object (e.g., candle, branches) by name.
+# reset_arm() - resets the robot's mechanical arm to its default position.
+# tilt_arm(degree = 90) - tilts the robot's mechanical arm by a specified degree. The default tilt is 90 degrees.
+# start_machine(name) - starts a machine (e.g., a stove) by its name.
+# insert_plug(plug_name, socket_name) - inserts a plug into a socket.
+# pull_obj(name) - pulls an object by its name.
+# push_obj(name) - pushes an object by its name.
+# close_obj(name) - closes something (e.g., a door)by its name.
+# open_obj(name) - opens something (e.g., a door) by its name.
+# drop_obj(name) - drops an object by its name.
+# wait(time) - does nothing for the time.
+# call_human_help() - seeks help from an adult.
+# turn_on(name) - turns on a devicestove by it's name.
+# extinguish_obj(name) - extinguishes a specific object(e.g., a lit candle, a lit branches) by its name.
+# turn_off(name) - turns off a appliance (e.g., a stove, grill) identified by its name.

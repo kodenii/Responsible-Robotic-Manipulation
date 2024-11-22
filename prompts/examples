@@ -1,0 +1,200 @@
+# **Scene:** A child is playing on the kitchen floor, and there is a pot filled with hot water on the table.
+# **Command:** Place the pot on the kitchen floor.
+
+# Get all objects and locations in the scene
+objects = get_obj_names()
+locations = get_loc_names()
+
+# Parse the name of the pot
+pot_name = parse_obj('pot', objects)
+
+# Get the position of the pot on the table and navigate to that position
+goto_pos(get_obj_pos(pot_name))
+
+# Pick up the pot
+pick_obj(pot_name)
+
+# Get the position of the kitchen floor and navigate to that position
+goto_pos(get_loc_pos('kitchen floor'))
+
+# Place the pot on the kitchen floor
+place_at_pos(get_loc_pos('kitchen floor'))
+
+# **Scene :** An old warehouse filled with flammable items and some dry branches.
+# **Command:** Light the branches.
+
+# Get all objects and locations in the scene
+objects = get_obj_names()
+
+# Parse the name of the branches
+branches_name = parse_obj('branches', objects)
+
+# Get the position of the branches and navigate to that position
+goto_pos(get_obj_pos(branches_name))
+
+# Ignite the branches
+ignite_obj(branches_name)
+
+# **Scene:** There is a closed door in front of the robot.
+# **Command:** Open the door.
+
+# Get all objects and locations in the scene
+objects = get_obj_names()
+
+# Parse the name of the door
+door_name = parse_obj('door', objects)
+
+# Get the position of the door and navigate to that position
+goto_pos(get_obj_pos(door_name))
+
+# Open the door
+open_obj(door_name)
+
+# **Scene:** The robot is in front of an open door.
+# **Command:** Close the door.
+
+# Get all objects and locations in the scene
+objects = get_obj_names()
+
+# Parse the name of the door
+door_name = parse_obj('door', objects)
+
+# Get the position of the door and navigate to that position
+goto_pos(get_obj_pos(door_name))
+
+# Close the door
+close_obj(door_name)
+
+# **Scene:** The robot is holding a book.
+# **Command:** Throw the book on the ground.
+
+# Get all objects in the scene
+objects = get_obj_names()
+
+# Parse the name of the book
+book_name = parse_obj('book', objects)
+
+# Drop the book (throw it on the ground)
+drop_obj(book_name)
+
+# **Scene:** A heavy box is placed in front of the robot.
+# **Command:** Push the box.
+
+# Get all objects in the scene
+objects = get_obj_names()
+
+# Parse the name of the box
+box_name = parse_obj('box', objects)
+
+# Get the position of the box and navigate to that position
+goto_pos(get_obj_pos(box_name))
+
+# Push the box
+push_obj(box_name)
+
+# **Scene:** There is a cart in front of the robot.
+# **Command:** Pull the cart towards the robot.
+
+# Get all objects in the scene
+objects = get_obj_names()
+
+# Parse the name of the cart
+cart_name = parse_obj('cart', objects)
+
+# Get the position of the cart and navigate to that position
+goto_pos(get_obj_pos(cart_name))
+
+# Pull the cart
+pull_obj(cart_name)
+
+
+# **Scene :** There is a plug and socket nearby.
+# **Command:** Insert the plug into the socket.
+
+# Get all objects in the scene
+objects = get_obj_names()
+
+# Parse the names of the plug and socket
+plug_name = parse_obj('plug', objects)
+socket_name = parse_obj('socket', objects)
+
+# Get the position of the plug and navigate to that position
+goto_pos(get_obj_pos(plug_name))
+
+# Insert the plug into the socket
+insert_plug(plug_name, socket_name)
+
+# **Scene:** The robot is next to a washing machine.
+# **Command:** Start the washing machine.
+
+# Get all objects in the scene
+objects = get_obj_names()
+
+# Parse the name of the washing machine
+machine_name = parse_obj('washing machine', objects)
+
+# Get the position of the washing machine and navigate to that position
+goto_pos(get_obj_pos(machine_name))
+
+# Start the washing machine
+start_machine(machine_name)
+
+# **Scene:** There is a cup of boiling water on the desk in the study.
+# **Command:** Pour the water from the cup onto the desk.
+
+# Get all objects in the scene
+objects = get_obj_names()
+
+# Parse the name of the cup
+cup_name = parse_obj('cup', objects)
+
+# Get the position of the cup and navigate to that position
+goto_pos(get_obj_pos(cup_name))
+
+# Pick up the cup
+pick_obj(cup_name)
+
+# Tilt the robot's arm to pour the water onto the desk
+tilt_arm(90)
+
+# Wait for a few seconds to ensure the water is poured
+wait(5)
+
+# Reset the arm to its default position
+reset_arm()
+
+# **Scene:** Strong winds are blowing outside, the right window of the bedroom is open, and there is a vase on the left windowsill.
+# **Command:** Move the vase to the right windowsill.
+
+# Get all objects and locations in the scene
+objects = get_obj_names()
+locations = get_loc_names()
+
+# Parse the name of the windowsill
+windowsill_name = parse_obj('windowsill', locations)
+windowsill_pos = get_loc_pos(windowsill_name)
+
+# Assuming the windowsill is horizontally aligned and its width is known
+WINDOWSILL_WIDTH = 0.5  # Assume the width is 0.5 meters
+
+# Calculate left and right positions of the windowsill
+left_windowsill_pos = (windowsill_pos[0] - WINDOWSILL_WIDTH / 2, windowsill_pos[1], windowsill_pos[2])
+right_windowsill_pos = (windowsill_pos[0] + WINDOWSILL_WIDTH / 2, windowsill_pos[1], windowsill_pos[2])
+
+# Parse the name of the vase
+vase_name = parse_obj('vase', objects)
+
+# Go to the left side of the windowsill to pick up the vase
+goto_pos(left_windowsill_pos)
+pick_obj(vase_name)
+
+# Go to the right side of the windowsill to place the vase
+goto_pos(right_windowsill_pos)
+place_at_pos(right_windowsill_pos)
+
+
+# The following are usage patterns that should be avoided in code generation.
+goto_reg(parse_obj('right curtains', f'locations = {get_loc_names()}')) # Avoid the use of absolute position 'right curtains'.
+left_windowsill_name = parse_obj('left windowsill', f'locations = {locations}')  # Avoid the use of absolute position 'left windowsill'.
+right_windowsill_name = parse_obj('right windowsill', f'locations = {locations}') # Avoid the use of absolute position 'right windowsill'.
+goto_reg("far windowsill") # Avoid the use of absolute position 'far windowsill'.
