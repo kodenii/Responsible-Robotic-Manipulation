@@ -2,14 +2,7 @@
 
 Official pytorch implementation of "Don't Let Your Robot be Harmful: Responsible Robotic Manipulation".
 
-[![arXiv](https://img.shields.io/badge/arXiv-2411.18289-b31b1b.svg)](XXX)
-[![Project](https://img.shields.io/badge/Project-Website-orange)](https://sites.google.com/view/safety-as-policy/home)
-
 ![Introduction](imgs/intro.jpg)
-
-## Updates
-
-- [28/11] We released the Safety-as-policy on Github.
 
 ## Overview of Safety-as-policy
 
@@ -75,16 +68,3 @@ python main.py
 ## Dataset
 
 Please download our dataset via this [link](https://drive.google.com/file/d/1IISVjSNpd6pUhzM0HPKG9C0rqZ_Xbi9F/view?usp=share_link).
-
-## Citation
-
-If you find this work useful for your research and applications, please cite using this BibTeX:
-
-```
-@article{ni2024dont,
-  title={Don’t Let Your Robot be Harmful: Responsible Robotic Manipulation},
-  author={Ni, Minheng and Zhang, Lei, Chen, Zihan and Zhang, Lei and Zuo, Wangmeng},
-  journal={arXiv preprint arXiv:2411.18289},
-  year={2024}
-}
-```
