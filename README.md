@@ -45,6 +45,7 @@ gradually develop cognition through iterative virtual interaction processes.
   </tr>
 </table>
 
+The video may freeze on the first frame before it finishes loading and may take a moment to start playing.
 
 ## Install and Preparation
 
