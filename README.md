@@ -2,7 +2,7 @@
 
 Official pytorch implementation of "Don't Let Your Robot be Harmful: Responsible Robotic Manipulation".
 
-[![arXiv](https://img.shields.io/badge/arXiv-2411.18289-b31b1b.svg)](XXX)
+[![arXiv](https://img.shields.io/badge/arXiv-2411.18289-b31b1b.svg)](https://arxiv.org/abs/2411.18289)
 [![Project](https://img.shields.io/badge/Project-Website-orange)](https://sites.google.com/view/safety-as-policy/home)
 
 ![Introduction](imgs/intro.jpg)
