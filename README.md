@@ -4,6 +4,9 @@ Official pytorch implementation of "Don't Let Your Robot be Harmful: Responsible
 
 ![Introduction](imgs/intro.jpg)
 
+## Supplementary Materials
+For supplementary materials, please refer to this [PDF file](suppl.pdf).
+
 ## Overview of Safety-as-policy
 
 ![Method](imgs/method.jpg)
