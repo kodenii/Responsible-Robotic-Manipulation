@@ -4,9 +4,6 @@ Official pytorch implementation of "Don't Let Your Robot be Harmful: Responsible
 
 ![Introduction](imgs/intro.jpg)
 
-## Supplementary Materials
-For supplementary materials, please refer to this [PDF file](suppl.pdf).
-
 ## Overview of Safety-as-policy
 
 ![Method](imgs/method.jpg)
@@ -44,6 +41,16 @@ gradually develop cognition through iterative virtual interaction processes.
     <td>
       <img src="imgs/case6.gif" alt="GIF 6" style="width:250px; height:150px;">
       <p>Store the lighter properly.</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="imgs/case7.gif" alt="GIF 7" style="width:250px; height:150px;">
+      <p>Dynamic Scene: Move the fork to the bowl.</p>
+    </td>
+    <td>
+      <img src="imgs/case8.gif" alt="GIF 8" style="width:250px; height:150px;">
+      <p>Static Scene: Move the fork to the bowl.</p>
     </td>
   </tr>
 </table>
